@@ -1,0 +1,44 @@
+//mixin-font-face
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: woff2 woff ttf svg) {
+    $src: null;
+    $extmods: (
+            svg: "#" + str-replace($name, " ", "_")
+    );
+    $formats: (
+            ttf: "truetype"
+    );
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+        font-display: swap;
+    }
+}
+
+
+//generate-font-face
+@include font-face("poppins extra light", "./fonts/poppins-fonts/poppins-100", 100, normal, woff2 woff ttf svg eot);
+@include font-face("poppins light", "../fonts/poppins-fonts/poppins-200", 200, normal, woff2 woff ttf svg eot);
+@include font-face("poppins medium light", "../fonts/poppins-fonts/poppins-300", 300, italic, woff2 woff ttf svg eot);
+@include font-face("poppins regular", "../fonts/poppins-fonts/poppins-regular", 400, normal, woff2 woff ttf svg eot);
+@include font-face("poppins light bold", "../fonts/poppins-fonts/poppins-500", 500, normal, woff2 woff ttf svg eot);
+@include font-face("poppins bold", "../fonts/poppins-fonts/poppins-600", 600, normal, woff2 woff ttf svg eot);
+@include font-face("poppins medium bold", "../fonts/poppins-fonts/poppins-700", 700, normal, woff2 woff ttf svg eot);
+@include font-face("poppins extra bold", "../fonts/poppins-fonts/poppins-800", 800, normal, woff2 woff ttf svg eot);
+
+
+

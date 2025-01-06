@@ -1,0 +1,16 @@
+<script src="{{asset('assets/web/js/bootstrap-5/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.min.js')}}"></script>
+{{--<script src="{{asset('assets/web/js/midnight/midnight.jquery.min.js')}}"></script>--}}
+<script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('assets/js/web/enquiry/enquiry.js') }}"></script>
+<script src="{{asset('assets/js/iziToast.min.js')}}"></script>
+<script src="{{ mix('assets/js/custom/phone-number-code.js') }}"></script>
+<script src="{{asset('assets/js/custom/custom.js')}}"></script>
+<script src="{{mix('assets/web/js/slick.min.js')}}"></script>
+<script src="{{ asset('assets/js/summernote.min.js') }}"></script>
+<script src="{{ mix('assets/js/custom/input-price-format.js') }}"></script>
+<script src="{{ asset('assets/js/web/hire_me/hire_me.js')}}"></script>
+<script src="{{ asset('assets/js/lazyload.min.js')}}"></script>
+<script src="{{ asset('assets/js/web/lazyload/lazyload.js')}}"></script>
+<script src="{{ asset('assets/js/aos.js') }}"></script>
+<script src="{{ mix('assets/js/web/app/app.js') }}"></script>

@@ -1,0 +1,291 @@
+.vcard-page-content {
+    max-width: 600px;
+    margin: 0 auto;
+    height: auto;
+    border: 1px solid #e9e9e9;
+}
+
+svg {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 5px solid #fff;
+}
+
+.admin_wrapper_card {
+    width: calc(100% - 30px);
+    margin: -100px auto 0;
+}
+
+.vcard-page-banner {
+    min-height: 270px;
+}
+
+.vcard_bg_cover_three {
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-height: 50px;
+    object-fit: cover;
+}
+
+.vcard_card_three_thumb {
+    min-width: 150px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 2px solid #fff;
+    
+    @media (max-width: 575px) {
+        width: 150px;
+        min-width: unset;
+    }
+}
+
+.vcard_card_thumb {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%);
+}
+
+.admin_card {
+    background: linear-gradient(240deg,  #cd425a 50%, #c13f59 50%);
+    padding: 20px;
+    box-shadow: 0 4px 11px rgb(0 0 0 / 26%);
+    width: 100%;
+    border-radius: 20px;
+    border: 5px solid #cd425a;
+    
+    @media (max-width: 575px) {
+        padding: 15px;
+    }
+}
+
+.admin-title {
+    border-bottom: 2px solid #e7bac2;
+}
+
+.content .admin-title h5 {
+    font-size: 30px;
+    text-shadow: 0 2px 10px black;
+}
+
+.admin-position {
+    font-size: 16px;
+    width: fit-content;
+    background: #cd687a;
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+
+.content p {
+    display: flex;
+    justify-content: center;
+    line-break: auto;
+    font-size: medium;
+    font-weight: normal;
+}
+
+.page-info-widget {
+    padding: 45px 30px;
+
+    @media (max-width: 380px) {
+        padding: 30px 15px;
+    }
+}
+
+.page-info-widget {
+    .info-widget {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+}
+
+.icon-link-content-linkedin, .icon-link-content-facebook, .icon-link-content-twitter, .icon-link-content-instagram, .icon-link-content-youtube, .icon-link-content-skype {
+    margin-left: 30px;
+
+    @media (max-width: 380px) {
+        margin-left: 15px;
+
+    }
+}
+
+.icon-link-content-linkedin .icon-link-title-linkedin, .icon-link-content-facebook .icon-link-title-facebook, .icon-link-content-twitter .icon-link-title-twitter, .icon-link-content-instagram .icon-link-title-instagram, .icon-link-content-youtube .icon-link-title-youtube, .icon-link-title-skype {
+    display: block;
+    font-weight: bold;
+    line-height: 19px;
+    margin-bottom: 3px;
+    font-family: 'Heebo', sans-serif !important;
+}
+
+.icon-link-facebook {
+    a {
+        word-break: break-word;
+    }
+}
+
+.icon-link-content-linkedin .icon-link-linkedin, .icon-link-content-facebook .icon-link-facebook, .icon-link-content-twitter .icon-link-twitter, .icon-link-content-instagram .icon-link-instagram, .icon-link-content-youtube .icon-link-youtube, .icon-link-skype {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.icon-content .icon {
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%);
+    justify-content: center;
+    align-items: center;
+}
+
+.vcard-icon-content .vcard-icon {
+    color: #ffffff !important;
+}
+
+.action-email-button {
+    background-color: #eb4134;
+    color: white;
+    border-radius: 50px;
+    min-width: 150px;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0px;
+    font-size: 14px;
+    font-family: 'Heebo', sans-serif !important;
+}
+
+.action-phone-button {
+    background-color: #A4C639;
+    color: white;
+    border-radius: 50px;
+    min-width: 150px;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0px;
+    font-size: 14px;
+    font-family: 'Heebo', sans-serif !important;
+}
+
+.action-email-button:hover {
+    color: white;
+}
+
+.action-phone-button:hover {
+    color: white;
+}
+
+.share-vcard {
+    border-radius: 50px;
+    text-align: center;
+    padding: 8px 0px;
+    min-width: 150px;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Heebo', sans-serif !important;
+}
+
+.share-facebook {
+    background: #4267B2 !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #4267B2;
+}
+
+.share-linkedin-in {
+    background: #0077b5 !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #0077b5;
+}
+
+.share-twitter {
+    background: #1DA1F2 !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #1DA1F2;
+}
+
+.share-whatsapp {
+    background: #25d366 !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #25d366;
+}
+
+.services-image {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, black 110%);
+        z-index: 1;
+    }
+
+    &__name {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        z-index: 2;
+        color: #d0d0d0;
+    }
+
+    img {
+        height: 350px;
+        object-fit: cover;
+    }
+}
+
+.testimonial-image-container {
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+}
+
+.testimonial-sliders {
+    .slick-track {
+        display: flex;
+
+        .slick-slide {
+            height: auto !important;
+
+            & > div {
+                height: 100%;
+            }
+        }
+    }
+}

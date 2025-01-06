@@ -1,0 +1,788 @@
+@import "variable";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//header 
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 3px 3px 20px 5px rgb(0 0 0 / 10%);
+
+    @media (max-width: 1200px) {
+        font-size: 14px;
+    }
+
+    .header-img {
+        width: 50px;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+//profile section
+.profile-section {
+    background: #FAFAFC;
+    //padding-bottom: 165px !important;
+
+    .profile-intro {
+        font-family: 'Poppins', sans-serif;
+
+        .social-icon-hover:hover {
+            color: $orange !important;
+        }
+
+        .profile-head {
+            padding: 100px;
+
+            @media (max-width: 992px) {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .profile-img {
+                width: 300px;
+                object-fit: cover;
+                height: 300px;
+
+                @media (max-width: 576px) {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+
+            .profile-content {
+                .first-content {
+                    color: $orange;
+                    font-size: 24px;
+                    line-height: 36px;
+
+                    @media (max-width: 576px) {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+
+                .large-heading {
+                    font-size: 54px;
+                    line-height: 81px;
+
+                    @media (max-width: 576px) {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                }
+
+                .small-content {
+                    font-size: 24px;
+                    line-height: 42px;
+                    font-weight: 600;
+
+                    @media (max-width: 576px) {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+
+                .profile-info {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #6B6B7A;
+
+                    @media (max-width: 576px) {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                }
+
+                .download-btn {
+                    background-color: $orange;
+                    color: white;
+
+                    @media (max-width: 576px) {
+                        font-size: 14px;
+                    }
+                }
+
+                .contact-btn {
+                    background: transparent;
+                    color: $orange;
+                    border: 1px solid;
+
+                    @media (max-width: 576px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.skill-section {
+    //left: 50%;
+    //transform: translateX(-50%);
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+//about section
+
+.about-main {
+    padding-top: 50px !important;
+
+    .about-me-description {
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 200px !important;
+    }
+
+    .about-data {
+        width: 190px;
+
+        @media (max-width: 480px) {
+            width: 150px;
+        }
+    }
+}
+
+.about-details {
+    .about-responsive {
+        word-break: break-all;
+        @media (max-width: 480px) {
+            font-size: 14px;
+        }
+    }
+}
+
+//skills-section
+
+.main-skills {
+    background: $white;
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 110px;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .skills-icon {
+        width: 70px;
+        height: 70px;
+        background-color: $orange;
+        border-radius: 50px;
+
+        .medal-img {
+            width: 26px;
+            height: 35px;
+        }
+
+        .vector-img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .headphone-img {
+            width: 30.62px;
+            height: 35px;
+        }
+    }
+}
+
+
+//achievement section 
+
+.achievement {
+    border: 1px solid $border-gray;
+    padding: 15px;
+    border-radius: 10px 50px 10px 10px;
+    min-height: 270px;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+
+    .achiev-icon {
+        width: 60px;
+        height: 60px;
+        background-color: $orange;
+        position: relative;
+        top: -45px;
+    }
+
+    .achievement-box {
+        .achive-title {
+            font-size: 18px;
+        }
+
+        .achive-info {
+            font-size: 14px;
+            color: #6B6B7A;
+        }
+    }
+}
+
+//education & experience
+.main-education {
+    background: #FAFAFC;
+
+    .education-section {
+        font-family: 'Poppins', sans-serif;
+        padding: 50px;
+
+        .education-data {
+            position: relative;
+            border-left: 1px solid $orange;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: $orange;
+                border-radius: 50%;
+                top: -12px;
+                left: -5px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $orange;
+                border-radius: 50%;
+                top: -16px;
+                left: -9.5px;
+            }
+        }
+
+        .education-content {
+            .education-info {
+                width: 80%;
+
+                .year {
+                    color: $orange;
+                }
+
+                .education-title {
+                    .education-logo {
+                        width: 36px;
+                        height: 26px;
+                    }
+                }
+
+                .experience-title {
+                    .experience-logo {
+                        width: 27px;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//recent-work
+.recent-work_section {
+    font-family: 'Poppins', sans-serif;
+
+    .recent-nav {
+        .nav-item {
+            .nav-link {
+                cursor: pointer;
+
+                .active {
+                    color: $orange !important;
+                }
+            }
+        }
+    }
+
+    .recent-btn {
+        background-color: $orange;
+        color: $white;
+    }
+
+    .hover-overlay {
+        .img-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            color: #000;
+        }
+
+        a {
+            img {
+                transition: all 0.3s ease-in-out;
+                height: 400px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            &:hover {
+
+                img {
+                    transform: scale(1.05);
+                    opacity: 0.3;
+
+                }
+
+                .img-title {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+//Pricing plan section
+.pricing-plan_section {
+    font-family: 'Poppins', sans-serif;
+
+    .pricing-card {
+        border-radius: 20px;
+        align-items: center;
+
+        .pricingP-plan-image {
+            object-fit: contain;
+        }
+
+        @media (max-width: 1200px) {
+            margin-bottom: 20px;
+        }
+
+        .pricing-title {
+            font-size: 24px;
+            background-color: transparent;
+        }
+
+        .pricing-amount {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .pricing-btn {
+            border: 1px solid $orange;
+            color: $orange;
+            border-radius: 6px;
+            font-size: 14px;
+
+        }
+
+    }
+
+    .pricing-list {
+        height: 205px !important;
+
+        .list-item {
+            list-style: none;
+            font-size: 14px;
+
+            img {
+                width: 18px;
+            }
+        }
+    }
+}
+
+//expertise area
+
+.expertise-section {
+    font-family: 'Poppins', sans-serif;
+
+    .view-more-link-skills {
+        background: $orange;
+        color: white;
+    }
+
+    .expertise-content {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .progress {
+        height: 8px;
+
+        .progress-bar {
+            background-color: $orange;
+        }
+    }
+
+    .expertise-responsive {
+        @media (max-width: 992px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+//offer section
+.offer-section {
+    font-family: 'Poppins', sans-serif;
+    background: #FAFAFC;
+
+    .offer-contents {
+        border: 1px solid $border-gray;
+        padding: 15px;
+        border-radius: 10px 50px 10px 10px;
+        min-height: 270px;
+        height: 100%;
+
+        .offer-icon {
+            width: 60px;
+            height: 60px;
+            background-color: $orange;
+            position: relative;
+            top: -45px;
+            object-fit: cover;
+        }
+
+        .offer-box {
+            top: -20px;
+            position: relative;
+
+            .offer-title {
+                font-size: 18px;
+            }
+
+            .offer-info {
+                font-size: 14px;
+                color: #6B6B7A;
+            }
+        }
+    }
+
+    .offer-btn {
+        background-color: $orange;
+        color: $white;
+        font-size: 14px;
+    }
+}
+
+//latest post
+
+.latest-post_section {
+    font-family: 'Poppins', sans-serif;
+
+    .post-btn {
+        background-color: $orange;
+        color: $white;
+        font-size: 14px;
+    }
+
+    .post-card {
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog_post_image {
+        height: 220px !important;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+//testimonial 
+
+.testimonial-section {
+    font-family: 'Poppins', sans-serif;
+
+    .testimonial-card {
+        width: 480px;
+        border-radius: 10px;
+        border: 1px solid #6B6B7A;
+
+        .card-text {
+            font-size: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 992px) {
+            width: auto;
+        }
+    }
+
+    .testimonial-responsive {
+        @media (max-width: 992px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+//contact-us 
+
+.contact-section {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("resources/assets/img/map.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+
+    #error-msg {
+        color: red;
+        margin-left: 2px;
+    }
+
+    #valid-msg {
+        color: green;
+        margin-left: 2px;
+    }
+
+    .region-code {
+        .btn-default {
+            color: #333 !important;
+            background-color: #e6e6e6 !important;
+            border-color: #adadad !important;
+            box-shadow: none;
+            height: 100%;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+
+        }
+    }
+
+
+    .contact-btn {
+        background-color: #FF980C;
+        color: white;
+        font-size: 14px;
+    }
+
+    .contact-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+        background-color: #FF980C;
+        padding: 40px;
+
+        .call-img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .mail-img {
+            Width: 32px;
+            Height: 23.17px;
+        }
+
+        .location-img {
+            width: 21px;
+            height: 30px;
+        }
+    }
+
+    .contact-title {
+        font-size: 18px;
+    }
+
+    .contact-no {
+        font-size: 14px;
+        color: #6B6B7A;
+    }
+
+    .contact-info {
+        padding: 25px;
+    }
+}
+
+//footer section
+footer {
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.1);
+
+    p {
+        color: $orange;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+.slick-slide {
+    padding: 10px;
+    height: auto;
+}
+
+.slick-slide img {
+    display: inline-block !important;
+}
+
+.custom-height {
+    height: 150px;
+}
+
+.view-all-recent-work, .view-all-about-me, .view-all-services, .view-all-skills {
+    display: none;
+}
+
+.custom-sticky-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background: $white;
+}
+
+.custom-sticky-footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: $white;
+}
+
+.active {
+    color: $orange !important;
+}
+
+//hire me modal css
+.hire-me-modal {
+    .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-content {
+        border: none;
+        font-size: 16px !important;
+        box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+        color: black;
+
+        #hireMeModalLabel {
+            color: #32325d;
+        }
+
+        ::placeholder {
+            font-size: 15px;
+            opacity: 1;
+            color: #adb5bd;
+        }
+
+        input {
+            font-size: .875rem;
+            height: 46px !important;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control:focus {
+            border-color: $orange !important;
+            box-shadow: none !important;
+        }
+
+        button.note-btn.btn.btn-default.btn-sm {
+            font-size: 13px !important;
+        }
+
+        .hire-me-btn {
+            background: $orange !important;
+            border: 1px solid transparent !important;
+            color: #ffffff;
+            box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: $orange;
+                color: #ffffff;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+            }
+        }
+
+        .hire-me-cancel-btn {
+            border: 1px solid transparent !important;
+            color: black;
+            background-color: #adb5bd !important;
+            box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+            margin-left: 5px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                //outline: none!important;
+                transform: translateY(-2px);
+                //background-color: #f4f5f7 !important;
+                //color:#5e5e80;
+            }
+        }
+
+        #closeModal {
+            background: none;
+            border: none;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+    }
+
+    .btn-default:not(:disabled):not(.disabled):active, .btn-default:not(:disabled):not(.disabled).active, .show > .btn-default.dropdown-toggle {
+        color: #fff !important;
+        border-color: $orange !important;
+        background-color: $orange !important;
+    }
+
+    .btn:focus {
+        box-shadow: 0 0 0 0.1rem $orange !important;
+    }
+}
+
+.custom-image {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+
+#go-to-top.show_top_page {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+}
+
+#go-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: $orange;
+    border-radius: 50%;
+    font-size: 13px;
+    color: #000;
+    -webkit-box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 20%);
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 20%);
+    opacity: 0;
+    text-decoration: none !important;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 997;
+}
+

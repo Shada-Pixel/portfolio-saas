@@ -1,0 +1,27 @@
+@import "variable";
+
+@mixin after-bottom-link {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $text-primary;
+    left: 0;
+    bottom: 0;
+}
+
+@mixin heading-line {
+    position: absolute;
+    content: "";
+    width: 175px;
+    height: 3px;
+    background-color: $text-primary;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    @media (max-width: 767px) {
+        width: 150px;
+    }
+}

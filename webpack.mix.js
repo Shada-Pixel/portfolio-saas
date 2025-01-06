@@ -1,0 +1,323 @@
+const mix = require('laravel-mix');
+
+/*
+ |--------------------------------------------------------------------------
+ | Mix Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Mix provides a clean, fluent API for defining some Webpack build steps
+ | for your Laravel application. By default, we are compiling the Sass
+ | file for the application as well as bundling up all the JS files.
+ |
+ */
+
+mix.js('resources/js/app.js', 'public/js').vue();
+
+mix.sass('resources/sass/app.scss', 'public/css').
+    sass('resources/assets/style/style.scss', 'assets/css/style.css').
+    sass('resources/assets/style/web/style.scss', 'assets/css/web/style.css').
+    sass('resources/assets/web/scss/blog.scss',
+        'public/assets/web/css/blog.css').
+    sass('resources/assets/web/scss/blog-detail.scss',
+        'public/assets/web/css/blog-detail.css').
+    sass('resources/assets/web/scss/new-blog.scss',
+        'public/assets/web/css/new-blog.css').
+    sass('resources/assets/web/scss/new-blog-details.scss',
+        'public/assets/web/css/new-blog-details.css').
+    sass('resources/assets/web/scss/blog-three.scss',
+        'public/assets/web/css/blog-three.css').
+    sass('resources/assets/web/scss/blog-details-three.scss',
+        'public/assets/web/css/blog-details-three.css').
+    sass('resources/assets/web/scss/dark-theme.scss',
+        'public/assets/web/css/dark-theme.css').
+    sass('resources/assets/web/scss/fonts.scss',
+        'public/assets/web/css/fonts.css').
+    sass('resources/assets/web/scss/header.scss',
+        'public/assets/web/css/header.css').
+    sass('resources/assets/web/scss/home.scss',
+        'public/assets/web/css/home.css').
+    sass('resources/assets/web/scss/layout.scss',
+        'public/assets/web/css/layout.css').
+    sass('resources/assets/web/scss/mixin.scss',
+        'public/assets/web/css/mixin.css').
+    sass('resources/assets/web/scss/scrollbar.scss',
+        'public/assets/web/css/scrollbar.css').
+    sass('resources/assets/web/scss/variable.scss',
+        'public/assets/web/css/variable.css').
+    sass('resources/assets/web/scss/login.scss',
+        'public/assets/web/css/login.css').
+    sass('resources/assets/web/scss/404.scss',
+        'public/assets/web/css/404.css').
+    sass('resources/assets/style/phone-number-code.scss',
+        'public/assets/css/phone-number-code.css').
+    sass('resources/assets/front/scss/custom.scss',
+        'public/assets/front/css/custom.css').
+    sass('resources/assets/web/scss/portfolio.scss',
+        'public/assets/web/css/portfolio.css').
+    // 'public/assets/front/css/custom.css').
+    sass('resources/assets/web/scss/portfolio-theme-three.scss',
+        'public/assets/web/css/portfolio-theme-three.css').
+    sass('resources/assets/front/scss/pricing.scss',
+        'public/assets/front/css/pricing.css').
+    sass(
+        'resources/assets/style/subscription_pricing_plans/subscription_pricing_plan.scss',
+        'public/assets/style/subscription_pricing_plans/subscription_pricing_plan.css').
+    sass('resources/assets/style/web/vcards/vcards.scss',
+        'public/assets/css/web/vcards/vcards.css').
+    sass('resources/assets/style/web/vcards/vcards-two.scss',
+        'public/assets/css/web/vcards/vcards-two.css').
+    sass('resources/assets/style/web/vcards/vcards-three.scss',
+        'public/assets/css/web/vcards/vcards-three.css').
+    sass('resources/assets/style/web/vcards/vcards-four.scss',
+        'public/assets/css/web/vcards/vcards-four.css').
+    sass('resources/assets/style/web/vcards/vcards-five.scss',
+        'public/assets/css/web/vcards/vcards-five.css').
+    sass('resources/assets/style/web/vcard-template.scss',
+        'public/assets/css/web/vcard-template.css');
+
+mix.css('resources/css/bootstrap-datetimepicker.min.css',
+    'public/assets/css/bootstrap-datetimepicker.min.css');
+
+mix.copyDirectory('node_modules/@fortawesome/fontawesome-free/webfonts',
+    'public/assets/webfonts');
+mix.copyDirectory('resources/assets/img', 'public/assets/img');
+mix.copyDirectory('resources/assets/web/fonts/poppins-fonts',
+    'public/assets/web/css/fonts');
+mix.copyDirectory('resources/assets/web/images',
+    'public/assets/web/css/images');
+mix.copyDirectory('node_modules/slick-slider/slick/fonts',
+    'public/assets/web/css/fonts');
+mix.copyDirectory('node_modules/intl-tel-input/build/img',
+    'public/assets/css/intel/img');
+mix.copyDirectory('node_modules/@simonwep/pickr/types',
+    'public/color-pickr');
+mix.copyDirectory('node_modules/summernote/dist/font',
+    'public/assets/css/font');
+mix.copyDirectory('resources/assets/front',
+    'public/assets/front');
+mix.copyDirectory('node_modules/password-strength-meter/dist',
+    'public/assets/password-strength-meter/dist');
+mix.copyDirectory('resources/assets/web/js/bootstrap-5',
+    'public/assets/web/js/bootstrap-5');
+
+mix.copy('node_modules/izitoast/dist/css/iziToast.min.css',
+    'public/assets/css/iziToast.min.css');
+mix.copy('node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+    'public/assets/css/font-awesome.min.css');
+mix.copy('node_modules/datatables.net-dt/css/jquery.dataTables.min.css',
+    'public/assets/css/jquery.dataTables.min.css');
+mix.copy('node_modules/datatables.net-dt/images', 'public/assets/images');
+mix.copy('node_modules/select2/dist/css/select2.min.css',
+    'public/assets/css/select2.min.css');
+mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css',
+    'public/assets/css/bootstrap.min.css');
+mix.copy('node_modules/intl-tel-input/build/css/intlTelInput.css',
+    'public/assets/css/intel/css/intlTelInput.css');
+mix.copy('node_modules/intl-tel-input/build/css/intlTelInput.css',
+    'public/assets/css/intel/css/intlTelInput.css');
+mix.copy('node_modules/sweetalert2/dist/sweetalert2.css',
+    'public/assets/css/sweetalert2.css');
+mix.copy(
+    'node_modules/bootstrap-iconpicker/bootstrap-iconpicker/css/bootstrap-iconpicker.min.css',
+    'public/assets/css/bootstrap-iconpicker.min.css');
+mix.copy('node_modules/slick-slider/slick/slick-theme.css',
+    'public/assets/web/css/slick-theme.css');
+mix.copy('node_modules/slick-slider/slick/slick.css',
+    'public/assets/web/css/slick.css');
+mix.copy('node_modules/slick-slider/slick/ajax-loader.gif',
+    'public/assets/web/css/');
+mix.copy('node_modules/sweetalert2/dist/sweetalert2.all.min.js',
+    'public/assets/js/sweetalert2.all.min.js');
+mix.copy(
+    'node_modules/bootstrap-iconpicker/bootstrap-iconpicker/js/bootstrap-iconpicker.min.js',
+    'public/assets/js/bootstrap-iconpicker.min.js');
+mix.babel('node_modules/@simonwep/pickr/dist/themes/nano.min.css',
+    'public/assets/css/nano.min.css');
+mix.copy('node_modules/summernote/dist/summernote.min.css',
+    'public/assets/css/summernote.min.css');
+mix.copy('node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css',
+    'public/assets/css/dataTables.bootstrap4.min.css');
+mix.copy('node_modules/aos/dist/aos.css',
+    'public/assets/css/aos.css');
+
+mix.copy('resources/assets/web/scss/bootstrap-5/bootstrap.min.css',
+    'public/assets/web/css/bootstrap-5/bootstrap.min.css');
+
+mix.babel('node_modules/izitoast/dist/js/iziToast.min.js',
+    'public/assets/js/iziToast.min.js');
+mix.babel('node_modules/datatables.net/js/jquery.dataTables.min.js',
+    'public/assets/js/jquery.dataTables.min.js');
+mix.babel('node_modules/select2/dist/js/select2.min.js',
+    'public/assets/js/select2.min.js');
+mix.babel('node_modules/jquery/dist/jquery.min.js',
+    'public/assets/js/jquery.min.js');
+mix.babel('node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'public/assets/js/bootstrap.min.js');
+mix.babel('node_modules/moment/min/moment.min.js',
+    'public/assets/js/moment.min.js');
+mix.babel('node_modules/popper.js/dist/umd/popper.min.js',
+    'public/assets/js/popper.min.js');
+mix.babel('node_modules/jquery.nicescroll/dist/jquery.nicescroll.js',
+    'public/assets/js/jquery.nicescroll.js');
+mix.babel('node_modules/intl-tel-input/build/js/intlTelInput.js',
+    'public/assets/js/intel/js/intlTelInput.min.js');
+mix.babel('node_modules/intl-tel-input/build/js/utils.js',
+    'public/assets/js/intel/js/utils.min.js');
+mix.babel('node_modules/@simonwep/pickr/dist/pickr.min.js',
+    'public/assets/js/pickr.min.js');
+mix.babel('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    'public/assets/js/bootstrap.bundle.min.js');
+mix.babel('node_modules/slick-slider/slick/slick.min.js',
+    'public/assets/web/js/slick.min.js');
+mix.babel('node_modules/summernote/dist/summernote.min.js',
+    'public/assets/js/summernote.min.js');
+mix.babel('node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js',
+    'public/assets/js/dataTables.bootstrap4.min.js');
+mix.babel('node_modules/aos/dist/aos.js',
+    'public/assets/js/aos.js');
+mix.babel('node_modules/autonumeric/dist/autoNumeric.min.js',
+    'public/assets/js/autoNumeric.js');
+mix.babel('node_modules/vanilla-lazyload/dist/lazyload.min.js',
+    'public/assets/js/lazyload.min.js');
+
+mix.js('resources/assets/js/custom/custom.js',
+    'public/assets/js/custom/custom.js').
+    js('resources/assets/js/user-profile/user-profile.js',
+        'public/assets/js/user-profile/user-profile.js').
+    js('resources/assets/js/custom/custom-datatable.js',
+        'assets/js/custom/custom-datatable.js').
+    js('resources/assets/js/users/users.js',
+        'public/assets/js/users/users.js').
+    js('resources/assets/js/custom/phone-number-country-code.js',
+        'public/assets/js/custom/phone-number-country-code.js').
+    js('resources/assets/js/custom/country-state-city.js',
+        'public/assets/js/custom/country-state-city.js').
+    js('resources/assets/js/experience/create-edit.js',
+        'public/assets/js/experience/create-edit.js').
+    js('resources/assets/js/experience/experience.js',
+        'public/assets/js/experience/experience.js').
+    js('resources/assets/js/skills/skill.js',
+        'public/assets/js/skills/skill.js').
+    js('resources/assets/js/education/create-edit.js',
+        'public/assets/js/education/create-edit.js').
+    js('resources/assets/js/education/education.js',
+        'public/assets/js/education/education.js').
+    js('resources/assets/js/pricing_plan/create-edit.js',
+        'public/assets/js/pricing_plan/create-edit.js').
+    js('resources/assets/js/pricing_plan/pricing_plan.js',
+        'public/assets/js/pricing_plan/pricing_plan.js').
+    js('resources/assets/js/plan_currency/plan_currency.js',
+        'public/assets/js/plan_currency/plan_currency.js').
+    js('resources/assets/js/testimonial/testimonial.js',
+        'public/assets/js/testimonial/testimonial.js').
+    js('resources/assets/js/recent_work_types/recent_work_type.js',
+        'public/assets/js/recent_work_types/recent_work_type.js').
+    js('resources/assets/js/settings/settings.js',
+        'public/assets/js/settings/settings.js').
+    js('resources/assets/js/recent_works/recent_work.js',
+        'public/assets/js/recent_works/recent_work.js').
+    js('resources/assets/js/service/service.js',
+        'public/assets/js/service/service.js').
+    js('resources/assets/js/about_me/about_me.js',
+        'public/assets/js/about_me/about_me.js').
+    js('resources/assets/js/custom/color-picker.js',
+        'public/assets/js/custom/color-picker.js').
+    js('resources/js/circular_progress_bar.js',
+        'public/assets/js/circular_progress_bar.js').
+    js('resources/assets/js/categories/categories.js',
+        'public/assets/js/categories/categories.js').
+    js('resources/assets/js/enquiry/enquiry.js',
+        'public/assets/js/enquiry/enquiry.js').
+    js('resources/assets/js/blogs/blogs.js',
+        'public/assets/js/blogs/blogs.js').
+    js('resources/assets/js/blogs/create-edit.js',
+        'public/assets/js/blogs/create-edit.js').
+    js('resources/assets/js/web/home/home.js',
+        'public/assets/js/web/home/home.js').
+    js('resources/assets/js/web/enquiry/enquiry.js',
+        'public/assets/js/web/enquiry/enquiry.js').
+    js('resources/assets/js/hire_me/hire_me.js',
+        'public/assets/js/hire_me/hire_me.js').
+    js('resources/assets/js/web/hire_me/hire_me.js',
+        'public/assets/js/web/hire_me/hire_me.js').
+    js('resources/assets/js/sidebar_menu_search/sidebar_menu_search.js',
+        'public/assets/js/sidebar_menu_search/sidebar_menu_search.js').
+    js('resources/js/bootstrap-datepicker.js',
+        'public/assets/js/bootstrap-datepicker.js').
+    js('resources/js/bootstrap-iconpicker.bundle.min.js',
+        'public/assets/js/bootstrap-iconpicker.bundle.min.js').
+    js('resources/assets/js/web/lazyload/lazyload.js',
+        'public/assets/js/web/lazyload/lazyload.js').
+    js('resources/assets/js/custom/phone-number-code.js',
+        'public/assets/js/custom/phone-number-code.js').
+    js('resources/assets/js/custom/input-price-format.js',
+        'public/assets/js/custom/input-price-format.js').
+    js('resources/assets/js/web/app/app.js',
+        'public/assets/js/web/app/app.js').
+    js('resources/assets/js/app/app.js',
+        'public/assets/js/app/app.js').
+    js('resources/assets/js/login/login.js',
+        'public/assets/js/login/login.js').
+    js('resources/assets/js/web/blog_lists/blog_lists.js',
+        'public/assets/js/web/blog_lists/blog_lists.js').
+    js('resources/assets/js/admin_users/users.js',
+        'public/assets/js/admin_users/users.js').
+    js('resources/assets/js/admin_users/create-edit.js',
+        'public/assets/js/admin_users/create-edit.js').
+    js('resources/assets/js/countries/countries.js',
+        'public/assets/js/countries/countries.js').
+    js('resources/assets/js/states/states.js',
+        'public/assets/js/states/states.js').
+    js('resources/assets/js/cities/cities.js',
+        'public/assets/js/cities/cities.js').
+    js('resources/assets/js/front/front.js',
+        'public/assets/js/front/front.js').
+    js('resources/assets/front/js/landing.js',
+        'public/assets/front/js/landing.js').
+    js('resources/assets/js/front/sections/section-three/section-three.js',
+        'public/assets/js/front/sections/section-three/section-three.js').
+    js('resources/assets/js/front/sections/section-three/create-edit.js',
+        'public/assets/js/front/sections/section-three/create-edit.js').
+    js('resources/assets/js/front/sections/section-four/section-four.js',
+        'public/assets/js/front/sections/section-four/section-four.js').
+    js('resources/assets/js/front/sections/section-four/create-edit.js',
+        'public/assets/js/front/sections/section-four/create-edit.js').
+
+    js('resources/assets/js/front/sections/section-five/section-five.js',
+        'public/assets/js/front/sections/section-five/section-five.js').
+    js('resources/assets/js/front/featured_portfolio/featured_portfolio.js',
+        'public/assets/js/front/featured_portfolio/featured_portfolio.js').
+    js('resources/assets/js/front/portfolio/portfolio.js',
+        'public/assets/js/front/portfolio/portfolio.js').
+    js('resources/assets/js/subscription_plans/subscription_plan.js',
+        'public/assets/js/subscription_plans/subscription_plan.js').
+    js('resources/assets/js/vcards/vcards.js',
+        'public/assets/js/vcards/vcards.js').
+    js('resources/assets/js/vcards/create-edit.js',
+        'public/assets/js/vcards/create-edit.js').
+    js('resources/assets/js/subscriptions/subscription.js',
+        'public/assets/js/subscriptions/subscription.js').
+    js('resources/assets/js/subscriptions/free-subscription.js',
+        'public/assets/js/subscriptions/free-subscription.js').
+    js('resources/assets/js/follower/follower.js',
+        'public/assets/js/follower/follower.js').
+    js('resources/assets/js/following/following.js',
+        'public/assets/js/following/following.js').
+    js('resources/assets/js/qr_code/create-edit.js',
+        'public/assets/js/qr_code/create-edit.js').
+    js('resources/assets/js/qr_code/qrcode.js',
+        'public/assets/js/qr_code/qrcode.js').
+    js('resources/assets/web/js/midnight/midnight.jquery.min.js',
+        'public/assets/web/js/midnight/midnight.jquery.min.js').
+    js('resources/assets/js/front/vcards/vcard.js',
+        'public/assets/js/front/vcards/vcard.js').
+    version();
+
+//web js
+mix.js('resources/assets/web/js/script.js',
+    'public/assets/web/js/script.js').
+    js('resources/assets/web/js/new-theme-home.js',
+        'public/assets/web/js/new-theme-home.js').
+    js('resources/assets/web/js/new-theme-three.js',
+        'public/assets/web/js/new-theme-three.js').
+    version();

@@ -1,0 +1,246 @@
+@import "variable";
+
+
+//login page
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login-logo {
+        @media (max-width: 365px) {
+            width: 60px;
+        }
+    }
+    
+    .login-card {
+        background-color: $white;
+        box-shadow: 0 .1rem 1rem .25rem rgba(0, 0, 0, .05) !important;
+
+        .login-heading {
+            margin-bottom: 40px !important;
+        }
+
+        .form-group {
+            .custom-label {
+                font-size: 14px;
+                font-weight: 600;
+                font-family: Poppins, Helvetica, sans-serif;
+
+                .login-star {
+                    font-size: 20px;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+
+        .custom-link {
+            font-weight: 600;
+        }
+
+        .email-section {
+            margin-bottom: 30px !important;
+        }
+
+        .password-section {
+            margin-bottom: 30px !important;
+        }
+
+        .login-sign {
+            font-size: 23px;
+            font-weight: 600;
+            font-family: Poppins, Helvetica, sans-serif;
+        }
+
+        .login-text {
+            font-size: 17px;
+            color: gray;
+            font-family: Poppins, Helvetica, sans-serif;
+        }
+
+        .login-link {
+            font-weight: 600;
+        }
+    }
+}
+
+.custom_alert {
+    padding: 0 30px 0 10px !important;
+}
+
+.login-footer{
+    width: 100%;
+    position: fixed !important;
+    bottom: 0 !important;
+    z-index: 999 !important;
+    //display: inline-block;
+    transition: all .5s;
+    background-color: #172b4d;
+    display: none;
+}
+
+body#app{
+    margin-bottom: 0 !important;
+    height: auto !important;
+}
+
+//Register form  
+
+.register-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 767px) {
+        height: auto;
+    }
+
+    .register-card {
+        background-color: $white;
+        box-shadow: 0 .1rem 1rem .25rem rgba(0, 0, 0, .05) !important;
+    }
+
+    .reg-heading {
+        font-size: 22px;
+        font-family: Poppins, Helvetica, sans-serif;
+    }
+
+    .reg-link {
+        font-weight: 600;
+    }
+
+    .reg-text {
+        color: #a3a0a0;
+        font-family: Poppins, Helvetica, sans-serif;
+
+        @media (max-width: 355px) {
+            font-size: 14px;
+        }
+    }
+
+    .reg-label {
+        font-weight: 400;
+        color: black !important;
+        font-family: Poppins, Helvetica, sans-serif;
+    }
+}
+
+//Forgot password 
+
+.forgotpassword-card {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .forgot-card {
+        background-color: $white;
+        box-shadow: 0 .1rem 1rem .25rem rgba(0, 0, 0, .05) !important;
+
+        .forgot-titile {
+            font-size: 22px;
+            font-family: Poppins, Helvetica, sans-serif;
+        }
+
+        .forgot-pera {
+            color: #a3a0a0;
+            font-family: Poppins, Helvetica, sans-serif;
+        }
+
+        .forgot-label {
+            font-weight: 600;
+            color: black;
+        }
+
+        .forgot-btn {
+            @media (max-width: 355px) {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+
+//Reset password 
+
+.resetpass-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media (max-width: 320px) {
+        height: auto;
+    }
+
+    .reset-card {
+        background-color: $white;
+        box-shadow: 0 .1rem 1rem .25rem rgba(0, 0, 0, .05) !important;
+
+        .reset-titile {
+            font-size: 22px;
+            font-family: Poppins, Helvetica, sans-serif;
+        }
+
+        .reset-pera {
+            color: #a3a0a0;
+            font-family: Poppins, Helvetica, sans-serif;
+        }
+
+        .reset-label {
+            font-weight: 600;
+            color: black;
+        }
+    }
+}
+
+.form-control {
+    color: #000 !important;
+}
+
+@-webkit-keyframes spinner-border {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner-border {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: 0.75s linear infinite spinner-border;
+    animation: 0.75s linear infinite spinner-border;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .spinner-border,
+    .spinner-grow {
+        -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+    }
+}
+
+.pass-wrapper {
+    width: 100%;
+    margin-top: 4px;
+}
+

@@ -1,0 +1,15 @@
+.template-image {
+    width: 250px;
+    height: 420px;
+}
+.img-btn > input{
+    display: none;
+}
+.img-btn > img{
+    cursor:pointer;
+    border:5px solid transparent;
+}
+.img-btn > input:checked + img{
+    border-color: #f4375c;
+    border-radius:10px;
+}

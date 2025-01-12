@@ -56,6 +56,7 @@ class RecentWork extends Model implements HasMedia
         'type_id',
         'title',
         'link',
+        'video_link',
     ];
 
     /**

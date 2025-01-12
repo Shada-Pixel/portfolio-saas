@@ -18,6 +18,7 @@ class CreateRecentWorksTable extends Migration
             $table->unsignedInteger('type_id');
             $table->string('title');
             $table->string('link')->nullable();
+            $table->string('video_link')->nullable();
             $table->timestamps();
             $table->string('tenant_id',100);
 

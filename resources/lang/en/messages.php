@@ -10,6 +10,7 @@ return [
     */
 
     //menu.blade keys
+    'video_link'                        => 'Video Link',
     'users'                             => 'Users',
     'full_name'                         => 'Full Name',
     'experiences'                       => 'Experiences',
@@ -206,7 +207,7 @@ return [
         's6_text_secondary'             => 'Text Secondary',
     ],
 
-    //    featured 
+    //    featured
     'featured_portfolio' => [
         'portfolio'                  => 'Featured Portfolio\'s',
         'featured'                   => 'Featured',
@@ -328,7 +329,7 @@ return [
         'select_plan_type'     => 'Select Plan Type',
     ],
 
-    //pricing plan currency 
+    //pricing plan currency
     'pricing_plan_currency'       => [
         'plan_currencies'     => 'Plan Currencies',
         'new_plan_currency'   => 'New Plan Currency',

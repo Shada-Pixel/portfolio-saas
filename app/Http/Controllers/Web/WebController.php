@@ -29,6 +29,7 @@ class WebController extends AppBaseController
         }
     }
 
+    
     /**
      * @return Application|Factory|View
      */

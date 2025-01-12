@@ -289,6 +289,16 @@ class User extends Authenticatable implements HasMedia, MustVerifyEmail
         return $this->hasMany(FavoritePortfolio::class, 'follower_id', 'id');
     }
 
+    /**
+     * @return HasMany
+     */
+    public function followers()
+    {
+        return $this->hasMany(FavoritePortfolio::class, 'following_id', 'id');
+    }
+
+
+
 
     /**
      *

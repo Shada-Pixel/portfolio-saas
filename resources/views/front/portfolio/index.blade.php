@@ -31,6 +31,7 @@
                                             <img src="{{ $featuredPortfolio->profile_image }}" alt="profile-icon"
                                                  class="mb-3 rounded-circle featured-profile-image"/>
                                             <h3 class="card-title">{{ $featuredPortfolio->full_name }}</h3>
+                                            <p>Follower: {{$featuredPortfolio->followers->count()}}</p>
                                             <p class="card-text">
                                                 {!! Str::limit($featuredPortfolio->about_me, 100) !!}
                                             </p>

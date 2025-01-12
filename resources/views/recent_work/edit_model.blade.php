@@ -23,7 +23,10 @@
                     {{ Form::label('link',__('messages.link').':') }}
                     {{ Form::text('link', null, ['class' => 'form-control','placeholder' => __('messages.recent_work_placeholder.enter_link'),'id'=>'editLink']) }}
                 </div>
-
+                <div class="form-group col-xl-12 col-md-12 col-sm-12">
+                    {{ Form::label('video_link',__('messages.video_link').':') }}
+                    {{ Form::text('video_link', null, ['class' => 'form-control','placeholder' => __('messages.recent_work_placeholder.enter_link'),'id'=>'video_link']) }}
+                </div>
 
                 <div class="form-group col-xl-12 col-md-12 col-sm-12">
                     {{ Form::label('attachment', __('messages.attachments').':') }}<span

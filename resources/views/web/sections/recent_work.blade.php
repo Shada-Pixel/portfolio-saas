@@ -30,11 +30,17 @@
                                         <div id="{{$recentWorkType->id}}" class="tabcontent p-0">
                                             <div class="row">
                                                 @foreach($recentWorkType->recentWorks as $key=> $recentWork)
+                                                    @if ($recentWork->video_link != null )
+                                                    <div class="col-xs-4 col-md-12 pl-0 pr-0 d-flex justify-content-center">
+                                                        <iframe width="560" height="315" src="{{$recentWork->video_link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                    </div>
+
+                                                    @endif
                                                     @if($recentWork->media_url_arr != '')
                                                         @foreach($recentWork->media_url_arr as $key => $urlLink)
                                                             {{--                                                    @if($loop->iteration == 1 || $loop->iteration == 2 || $loop->iteration == 3)--}}
                                                             <div class="col-xs-4 col-md-4 pl-0 pr-0">
-                                                                {{--                                                            @elseif($loop->iteration == 4 || $loop->iteration == 5)--}}
+                                                                {{--   @elseif($loop->iteration == 4 || $loop->iteration == 5)--}}
                                                                 {{--                                                                <div class="col-xs-4 col-md-4 pl-0 pr-0">--}}
                                                                 {{--                                                                    @else--}}
                                                                 {{--                                                                        <div class="col-xs-4 col-md-4 pl-0 pr-0">--}}

@@ -32,5 +32,10 @@ class AppServiceProvider extends ServiceProvider
             $updateFieldValue = isset($parameters[2]) ? $parameters[2] : null;
             return (new UniqueRecordRule($table, $column, $updateFieldValue))->passes($attribute, $value);
         });
+
+
+        $this->app->bind('path.public', function() {
+            return base_path().'/../public_html';
+        });
     }
 }

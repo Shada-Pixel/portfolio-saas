@@ -4,8 +4,10 @@
 <script src="{{ asset('assets/front/js/functions.js') }}"></script>
 <script src="{{ asset('assets/js/iziToast.min.js') }}"></script>
 <script src="{{ asset('assets/js/sweetalert2.all.min.js') }}"></script>
-<script src="{{ mix('assets/js/custom/custom.js') }}"></script>
-<script src="{{ mix('assets/front/js/landing.js') }}"></script>
+<script src="{{ asset('assets/js/custom/custom.js') }}"></script>
+<script src="{{ asset('assets/front/js/landing.js') }}"></script>
+{{-- <script src="{{ mix('assets/js/custom/custom.js') }}"></script>
+<script src="{{ mix('assets/front/js/landing.js') }}"></script> --}}
 <script>
     // Owl Carousel Scripts
     jQuery(window).on('pluginCarouselReady', function () {

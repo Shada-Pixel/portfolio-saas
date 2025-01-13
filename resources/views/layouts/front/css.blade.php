@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/front/css/animate.css') }}" type="text/css"/>
 <link rel="stylesheet" href="{{ asset('assets/front/css/magnific-popup.css') }}" type="text/css"/>
-<link rel="stylesheet" href="{{ mix('assets/front/css/custom.css') }}" type="text/css"/>
+{{-- <link rel="stylesheet" href="{{ mix('assets/front/css/custom.css') }}" type="text/css"/> --}}
+<link rel="stylesheet" href="{{ asset('assets/front/css/custom.css') }}" type="text/css"/>
 
 <!-- Freelancer Specific Stylesheet -->
 <link rel="stylesheet" href="{{ asset('assets/front/css/fonts.css') }}" type="text/css"/>
